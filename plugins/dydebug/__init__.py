@@ -341,6 +341,7 @@ class Dydebug(_PluginBase):
 
                 qr_code_data = requests.get(qr_code_url).content
                 self._qr_code_image = io.BytesIO(qr_code_data)
+                logger.info("找到二维码图片", qr_code_url)
                 return True
             else:
                 logger.warning("未找到二维码")
