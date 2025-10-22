@@ -19,12 +19,12 @@
 ***
 * 需要获取一个参数和配置CookieCloud。如果收到验证码，请以`?`结尾发送到企业微信应用。如:`110103？`
 
-1. 获取应用ID，图中地址栏的末尾**红线部分就是应用ID**，多个应用使用英文逗号分隔
-[图示](https://www.helloimg.com/i/2024/11/15/67369975b7769.jpg)
+1. 获取应用ID，图中地址栏的末尾**红线部分就是应用ID**，多个应用使用英文逗号分隔 <br>
+![image](https://www.helloimg.com/i/2024/11/15/67369975b7769.jpg)
 
-3. 启用CookieCloud，在MoviePilot的`设定`→`站点`中勾选 **“启用本地Cookiecloud服务器”**，即使用内建CookieCloud
-* 可以不启用，要取消勾选插件配置中的`使用CookieCloud`开关，这样MP重启后Cookie就会失效。
-[图示](https://www.helloimg.com/i/2024/11/15/67369975dd82f.jpg)
+2. 启用CookieCloud，在MoviePilot的`设定`→`站点`中勾选 **“启用本地Cookiecloud服务器”**，即使用内建CookieCloud
+* 可以不启用，要取消勾选插件配置中的`使用CookieCloud`开关，这样MP重启后Cookie就会失效。 <br>
+![image](https://www.helloimg.com/i/2024/11/15/67369975dd82f.jpg)  <br>
 
 3. 使用企业微信应用通知示例。使用第三方推送则在"通知方式"中填写相应Token/API。
 * 多个通知以`||`分隔，在MoviePilotV2使用多个通知时，微信作为首选其余通知方式会失效(但可以启用"IP变动后通知"功能，通知逻辑就变成：Cookie失效且公网IP变动时发送通知)。[配置方式](https://github.com/RamenRa/MoviePilot-Plugins#%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E4%BD%9C%E4%B8%BA%E4%B8%BB%E9%80%9A%E7%9F%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BD%9C%E4%B8%BA%E5%A4%87%E7%94%A8) <br>
