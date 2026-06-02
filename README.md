@@ -1,3 +1,19 @@
+<h1 align="center">⚠️ 预更新 </h1>
+
+
+🔥 v2.1.1 更新内容
+> - 🧠 优化 MP / NAS 关闭期间 IP 变动无法检测的问题
+> - 📡 MP V2 微信作为主通知，同时支持第三方作为备用通知
+> - 🔕 支持 ||Q 静默模式：修改 IP 时不发送任何通知
+
+
+> - 🚀 测试仓库（⚠️ 体验版本）：
+https://github.com/Rob0088/MoviePilot-Plugins
+
+⚠️ 请仅用于 v2.1.1 测试体验，不建议随意切换其他版本
+
+⚠️ 请勿随意更新到其他版本，仅建议使用 v2.1.1 测试分支
+
 ## 简介 v1.7.x
 ***
 * 在原[suraxiuxiu库](https://github.com/suraxiuxiu/MoviePilot-Plugins/)的基础上添加了第三方api。功能：定时检查公网IP覆盖填写到企业微信“可信IP”列表中。确保微信通知可用<br>
