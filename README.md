@@ -3,7 +3,9 @@
 
 🔥 v2.1.1 更新内容
 > - 🧠 优化 MP / NAS 关闭期间 IP 变动无法检测的问题
-> - 📡 MP V2 微信作为主通知，同时支持第三方作为备用通知（cookie失效且IP变动导致企微通知无法使用时，自动尝试第三方通知）
+> - 📧 新增IYUU通知支持，移除AnPush
+> - 📡 MP V2 微信作为主通知时，支持第三方作为备用通知
+ - （cookie失效且IP变动导致企微通知无法使用时，自动尝试第三方通知。理论上来说/push_qr会一直能推送二维码）
 > - 🔕 支持 ||Q 静默模式：修改 IP 时不发送任何通知
 
 
@@ -26,7 +28,7 @@ https://github.com/Rob0088/MoviePilot-Plugins
 * 支持检测多网络出口(从URL获取)：面向iKuai随机分流或MP网络出口会跳的多网络出口用户。
 
 ### 可选的通知
-* 企业微信应用、[Server酱](https://sct.ftqq.com/sendkey)、[AnPush](https://anpush.com/push/tool)、[PushPlus推送](https://www.pushplus.plus/push1.html)。配置任意一个后才可以正常使用`/push_qr`<br>
+* 企业微信应用、[Server酱](https://sct.ftqq.com/sendkey)、[IYUU](https://iyuu.cn/)、[PushPlus推送](https://www.pushplus.plus/push1.html)。配置任意一个后才可以正常使用`/push_qr`<br>
 
 ### 远程命令 /push_qr
 * 直接在企业微信应用发送`/push_qr`，MoviePoilt收到后插件开始推送登录二维码。也可以用来**测试通知是否可用**
