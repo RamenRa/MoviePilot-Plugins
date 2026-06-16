@@ -14,10 +14,11 @@
 
 * 企业微信应用、[Server酱](https://sct.ftqq.com/sendkey)、[IYUU](https://iyuu.cn/)、[PushPlus推送](https://www.pushplus.plus/push1.html)。配置任意一个后才可以正常使用 `/push_qr`<br>
 
-### 💻 远程命令 /push_qr
+### 💻 远程命令 /push_qr和/wxcode
 
 * 直接在企业微信应用发送 `/push_qr`，MoviePoilt收到后插件开始推送登录二维码。也可以用来**测试通知是否可用**
 * MP可能会因网络波动没有收到推送命令，尤其是使用Cloudflare隧道的用户。多发送几次即可。收没收到以**MP的日志为准**。
+* 当需要接收验证码时且启用了`AI全局助手`的用户使用`/wxcode` + `验证码`的方式发送验证码。如`/wxcode 550110`
 
 ---
 
