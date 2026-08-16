@@ -394,11 +394,15 @@ class DynamicWeChat(_PluginBase):
                             cookie_header = cookie
                             break
                     if cookie_header == '':
+                        logger.warn("CookieCloud中未找到 .work.weixin.qq.com 的cookie, 尝试使用手动填写的cookie")
                         cookie_header = self._cookie_header
             else:  # 不使用CookieCloud
                 cookie_header = self._cookie_header
                 # return
             cookie = self.parse_cookie_header(cookie_header)
+            if not cookie:
+                logger.error("未获取到有效的企业微信cookie, 请检查CookieCloud是否已同步 work.weixin.qq.com 或手动填写cookie")
+                return
             self._cookie_from_CC = cookie
             return cookie
         except Exception as e:
@@ -408,11 +412,19 @@ class DynamicWeChat(_PluginBase):
 
     def parse_cookie_header(self, cookie_header):
         cookies = []
+        if not cookie_header:
+            return cookies
         for cookie in cookie_header.split(';'):
-            name, value = cookie.strip().split('=', 1)
+            cookie = cookie.strip()
+            if not cookie or '=' not in cookie:  # 跳过空段和 HttpOnly 之类的无值属性
+                continue
+            name, value = cookie.split('=', 1)
+            name = name.strip()
+            if not name:
+                continue
             cookies.append({
                 'name': name,
-                'value': value,
+                'value': value.strip(),
                 'domain': '.work.weixin.qq.com',
                 'path': '/'
             })
