@@ -69,7 +69,7 @@
     ├── easytier.py
     ├── jellyfin.py
     ├── wireguard_未适配.py       # 按发布包提供
-    └── ikev2.py           # 使用IKEv2时添加
+    └── ikev2.py                  # 使用IKEv2时添加
 ```
 
 MP 插件是独立代码，通常位于插件目录的 `tunnelyield/__init__.py`，不要与 `providers/__init__.py` 混淆。
