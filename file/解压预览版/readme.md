@@ -68,7 +68,7 @@
     ├── __init__.py
     ├── easytier.py
     ├── jellyfin.py
-    ├── wireguard.py       # 按发布包提供
+    ├── wireguard_未适配.py       # 按发布包提供
     └── ikev2.py           # 使用IKEv2时添加
 ```
 
